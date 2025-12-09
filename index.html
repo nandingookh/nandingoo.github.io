@@ -1,0 +1,268 @@
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Mongolz Fanpage</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+	
+</head>
+<body>
+	<div id="welcome-message" style="
+		background: #ff66b2;
+		color: black;
+		padding: 20px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+		border-bottom: 4px solid #ff3385;
+		display: none;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	">
+		HI PROFESSOR OZAYDIN, WELCOME TO THE MONGOLZ FANPAGE!
+		<button onclick="this.parentElement.style.display='none'" 
+				style="
+					margin-left: 25px;
+					background: black;
+					color: #ff66b2;
+					border: none;
+					cursor: pointer;
+					padding: 8px 15px;
+					font-size: 18px;
+					font-weight: bold;
+					border-radius: 5px;
+				">
+			✕ CLOSE
+		</button>
+	</div>
+	
+	<script>
+		// Show welcome message ONLY on homepage
+		if (window.location.pathname.endsWith('index.html') || 
+			window.location.pathname.endsWith('/') || 
+			window.location.pathname === '') {
+			document.getElementById('welcome-message').style.display = 'block';
+		}
+	</script>
+	<div id="page">
+		<div id="header">
+			<div>
+				<a href="index.html" class="logo"><img src="images/logo.png" alt="" style="width: 60px; height: auto;"></a>
+				<ul id="navigation">
+					<li class="selected">
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="history.html">History</a>
+					</li>
+					<li>
+						<a href="roster.html">Team Roster</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="body" class="home">
+			<div class="header">
+				<img src="images/1.png" alt="">
+				<div>
+					<a href="roster.html">Meet the team</a>
+				</div>
+			</div>
+			<div class="body">
+				<div>
+					<div>
+						<h1>#5 World Rank - Mongolian Counter-Strike 2 team</h1>
+						<h2>Let's get to know the MongolZ team</h2>
+						
+					</div>
+					<img src="images/2.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<p style="
+					font-size: 35px; EALLY BIG! */
+					font-weight: bold;
+					color: white  /* Keep original color */
+					text-align: center;
+					width: 100%;
+					margin-top: 1px;
+				">
+					22224526 Nandingoo Khurtsbileg
+				</p>
+				<p style="
+					font-size: 14px;
+					color: white;
+					text-align: center;
+					margin-top: 1px;
+				">
+					Original template: <a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" style="color: #0066cc; text-decoration: none;">
+						https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- Mongolz vs Vitality Match Predictor - NO AUTO CLOSE -->
+	<div id="match-popup" style="
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: linear-gradient(135deg, #ff66b2, #ff3385);
+		color: black;
+		padding: 30px;
+		border-radius: 20px;
+		box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+		z-index: 1000;
+		border: 5px solid black;
+		font-family: Arial, sans-serif;
+		width: 90%;
+		max-width: 500px;
+		text-align: center;
+		display: none;
+	">
+		<h1 style="margin: 0 0 10px 0; color: black; font-size: 28px;">
+			WHO WILL WIN THE UPCOMING MATCH?
+		</h1>
+		
+		<div style="
+			background: rgba(255,255,255,0.9);
+			padding: 20px;
+			border-radius: 15px;
+			margin: 15px 0;
+			border: 3px solid black;
+		">
+			<h2 style="color: #ff3385; margin: 0 0 10px 0;">🏆 The MongolZ vs Vitality 🏆</h2>
+			<p style="font-size: 20px; font-weight: bold; margin: 5px 0;">
+				Starladder Budapest Major 2025
+			</p>
+			<p style="font-size: 15px; margin: 5px 0;">
+				Playoffs - Quarterfinals - Bo3
+			</p>
+			<p style="font-size: 15px; margin: 5px 0;">
+				December 12 ULAT 3:00 AM
+			</p>
+			<p style="font-size: 15px; color: #666; margin-top: 10px;">
+				Pick your winner
+			</p>
+		</div>
+		
+		<div style="display: flex; gap: 15px; justify-content: center; margin: 20px 0;">
+			<button onclick="userPicked('Mongolz')" 
+					style="
+						flex: 1;
+						background: black;
+						color: #ff66b2;
+						border: 3px solid #ff66b2;
+						padding: 18px;
+						font-size: 20px;
+						font-weight: bold;
+						border-radius: 10px;
+						cursor: pointer;
+						transition: 0.3s;
+					"
+					onmouseover="this.style.background='#333'; this.style.transform='scale(1.05)';"
+					onmouseout="this.style.background='black'; this.style.transform='scale(1)';">
+				THE MONGOLZ
+			</button>
+			
+			<button onclick="userPicked('Vitality')" 
+					style="
+						flex: 1;
+						background: #FFD700;
+						color: black;
+						border: 3px solid black;
+						padding: 18px;
+						font-size: 20px;
+						font-weight: bold;
+						border-radius: 10px;
+						cursor: pointer;
+						transition: 0.3s;
+					"
+					onmouseover="this.style.background='#FFA500'; this.style.transform='scale(1.05)';"
+					onmouseout="this.style.background='#FFD700'; this.style.transform='scale(1)';">
+				VITALITY
+			</button>
+		</div>
+		
+		<div id="pick-result" style="
+			background: rgba(0,0,0,0.9);
+			color: white;
+			padding: 20px;
+			border-radius: 10px;
+			margin-top: 20px;
+			display: none;
+		">
+			<!-- Result appears here -->
+		</div>
+		
+		<button onclick="closePopup()" 
+				style="
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					background: black;
+					color: white;
+					border: none;
+					border-radius: 50%;
+					width: 40px;
+					height: 40px;
+					cursor: pointer;
+					font-size: 24px;
+					font-weight: bold;
+				">
+			×
+		</button>
+	</div>
+	
+	<script>
+		// MAIN FUNCTION: User makes a pick
+		function userPicked(team) {
+			let message = "";
+			
+			if (team === 'Mongolz') {
+				message = `
+					<h3 style="color: #ff66b2; margin-top: 0;">🎉 YOU PICKED MONGOLZ! 🎉</h3>
+					<p>Great prediction, we all root for the Mongolz here!</p>
+				`;
+			} else {
+				message = `
+					<h3 style="color: #FFD700; margin-top: 0;">🎉 YOU PICKED VITALITY! 🎉</h3>
+					<p>Nice prediction, I like apEX and ZywOo!</p>
+				`;
+			}
+			
+			// Display the result
+			const resultDiv = document.getElementById('pick-result');
+			resultDiv.innerHTML = message;
+			resultDiv.style.display = 'block';
+			
+			// Save to localStorage
+			localStorage.setItem('userPick', team);
+			
+			// NO AUTO-CLOSE - user must click X
+		}
+		
+		// Close the popup
+		function closePopup() {
+			document.getElementById('match-popup').style.display = 'none';
+		}
+		
+		// Show popup IMMEDIATELY when page loads (only on homepage)
+		window.addEventListener('load', function() {
+			// Check if we're on homepage
+			if (document.URL.includes('index.html') || document.URL.endsWith('/')) {
+				// Wait 1 second then show popup
+				setTimeout(function() {
+					document.getElementById('match-popup').style.display = 'block';
+				}, 1000);
+			}
+		});
+	</script>
+</body>
+</html>
